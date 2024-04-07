@@ -9,15 +9,15 @@ class Response
      *
      * @return \Illuminate\Http\JsonResponse
      */
-    public function sendResponse($result =[])
+    public function sendResponse($result =[],$code = 200)
     {
         $response = [
             'isSuccess' => true,
             'data'      => $result,
         ];
-        return response()->json($response, 200);
+        return response()->json($response, $code);
     }
-    public function sendPaginateResponse($result =[])
+    public function sendPaginateResponse($result =[], $code = 200)
     {
 
         $response = [
@@ -26,8 +26,7 @@ class Response
             'current_page'      => $result['current_page'],
             'total'             => $result['total']
         ];
-
-        return response()->json($response, 200);
+        return response()->json($response, $code);
     }
 
     /**

@@ -25,7 +25,7 @@ class ProductRepository implements ProductInterface
 
     public function productUpdate($request, $id): bool
     {
-        Product::find($id)->update($request);
+        Product::where('id',$id)->lockForUpdate()->update($request);
         return true;
     }
     public function productDelete($id): bool

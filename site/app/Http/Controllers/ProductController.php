@@ -39,7 +39,7 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         $datas = $request->all();
-        return $this->response->sendResponse($this->repository->productCreate($datas));
+        return $this->response->sendResponse($this->repository->productCreate($datas),201);
     }
 
     /**
@@ -72,6 +72,6 @@ class ProductController extends Controller
      */
     public function destroy(string $id)
     {
-        return $this->response->sendResponse($this->repository->productDelete($id));
+        return $this->response->sendResponse($this->repository->productDelete($id),202);
     }
 }

@@ -42,7 +42,7 @@ class ShoppingController extends Controller
         $datas = $request->all();
         $datas['user_id'] = Auth::id();
         $datas['total_price']  = $datas['price'] * $datas['amount'];
-        return $this->response->sendResponse($this->repository->shoppingCreate($datas));
+        return $this->response->sendResponse($this->repository->shoppingCreate($datas),201);
 
     }
 

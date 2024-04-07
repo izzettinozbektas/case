@@ -22,12 +22,12 @@
 - Terminalden proje dizinine gelip;
 - docker-compose up -d
 - docker exec -it api-app bash 
-- composer install
+- composer install --ignore-platform-reqs
 - php artisan migrate && php artisan db:seed && php artisan passport:install
 
 ###### Normal kurulum
 - Proje dizinide;
-- composer install
+- composer install --ignore-platform-reqs
 - php artisan migrate && php artisan db:seed && php artisan passport:install
 
 

@@ -23,12 +23,26 @@ services:
     networks:
       - app-network
 
+  # Mongo DB
+  mongodb:
+    container_name: api-mongodb
+    image: mongo:5.0
+    ports:
+      - "27017:27017"
+    networks:
+      - app-network
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=password
+      - MONGO_INITDB_DATABASE=case
+
+
   #Mysql
   mysql:
     image: mysql:8
     container_name: api-mysql
     ports:
-      - 3306:3306
+      - "3306:3306"
     networks:
       - app-network
     environment:

@@ -49,7 +49,7 @@ class OrderController extends Controller
         $datas['payservice_response'] = $examplePayService->response; // ödeme data
         $datas['user_id'] = Auth::id();
         $datas['status'] = $examplePayService->status;
-        return $this->response->sendResponse($this->repository->orderCreate($datas));
+        return $this->response->sendResponse($this->repository->orderCreate($datas),201);
     }
 
     /**
