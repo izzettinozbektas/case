@@ -16,18 +16,20 @@
 * Laravel Rest Api Response
 * Error Handling Control
 * Composer v2.5.8
+* MongoDb
+* Docker
 
 ###### Kurulum
 - Docker ile kurulum için
 - Terminalden proje dizinine gelip;
 - docker-compose up -d
 - docker exec -it api-app bash 
-- composer install --ignore-platform-reqs
+- composer install
 - php artisan migrate && php artisan db:seed && php artisan passport:install
 
 ###### Normal kurulum
 - Proje dizinide;
-- composer install --ignore-platform-reqs
+- composer install
 - php artisan migrate && php artisan db:seed && php artisan passport:install
 
 
@@ -42,3 +44,7 @@
  - localhost:8000/api ... api docker url 
  - localhost:8001 ... phpmyadmin -> giriş bilgileri 
  - `host= api.mysql`, `kullanıcı adı= user`, `şifre = root`
+
+- > Postmandan  shopping sekmesinden sepete ürün ekleyebiliriz,
+- > Order sekmesi sipariş oluşturabilir ve siparişleri göre biliriz.
+- > Product sekmesi ile crud işlemleri yapa biliriz. Laravel 'lockForUpdate(Pessimistic Locking)' fonksiyonu ilede işlem takibi ile karışıklığı stok karışıklığını önleye biliyoruz 
