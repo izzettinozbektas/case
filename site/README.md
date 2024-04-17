@@ -13,6 +13,7 @@
 * Laravel Spatie Role & Permission
 * Laravel Passport
 * Laravel Services Repository Pattern 
+* Laravel Observer
 * Laravel Rest Api Response
 * Error Handling Control
 * Composer v2.5.8
